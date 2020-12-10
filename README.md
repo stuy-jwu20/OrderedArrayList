@@ -18,3 +18,5 @@ Asked on how we should get started on NoNullArrayList.
   After writing the header, we said to start overriding methods.
 
 Someone shared their screen and we helped him on getting started and they asked if we need a private variable.
+
+Wondered about what "no serializable class" could possibly mean since some of us got that message.
