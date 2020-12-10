@@ -16,3 +16,5 @@ Asked if we needed to import ArrayList or we make our own class for it.
 
 Asked on how we should get started on NoNullArrayList.
   After writing the header, we said to start overriding methods.
+
+Someone shared their screen and we helped him on getting started and they asked if we need a private variable.
