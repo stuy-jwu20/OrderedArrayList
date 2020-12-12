@@ -1,6 +1,14 @@
 import java.util.*;
 public class NoNullArrayList<T> extends ArrayList<T> {
 
+  public NoNullArrayList<T>() {
+    super();
+  }
+
+  public NoNullArrayList<T>(int startingCapacity) {
+    super(startingCapacity);
+  }
+
   public T set(int index, T value) {
     if (index < 0 || index >= this.size()) {
       throw new IndexOutOfBoundsException("\n ! Your index is out of bounds! It should be at least 0 and less than " + size() + " but we received this from you: " + index + " !");
