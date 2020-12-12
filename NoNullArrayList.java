@@ -1,11 +1,11 @@
 import java.util.*;
 public class NoNullArrayList<T> extends ArrayList<T> {
 
-  public NoNullArrayList<T>() {
+  public NoNullArrayList() {
     super();
   }
 
-  public NoNullArrayList<T>(int startingCapacity) {
+  public NoNullArrayList(int startingCapacity) {
     super(startingCapacity);
   }
 
@@ -25,16 +25,16 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     if (value == null) {
       throw new IllegalArgumentException("You tried to set a null value! That is not allowed.");
     }
-    return this.add(value);;
+    return this.add(value);
   }
 
-  public boolean add(int index, T value) {
+  public void add(int index, T value) {
     if (index < 0 || index >= this.size()) {
       throw new IndexOutOfBoundsException("\n ! Your index is out of bounds! It should be at least 0 and less than " + size() + " but we received this from you: " + index + " !");
     }
     else if (value == null) {
       throw new IllegalArgumentException("You tried to set a null value! That is not allowed.");
     }
-    return this.add(index, value);
+    this.add(index, value);
   }
 }

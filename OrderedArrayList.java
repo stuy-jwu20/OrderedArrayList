@@ -22,14 +22,12 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     return false;
   }
 
-  public boolean add(int index, T value) {
+  public void add(int index, T value) {
     for (int i = 0; i < this.size() - 1; i++) {
       if (this.get(i) < value) && (value < this.get(i+1)) {
         this.add(i+1, value);
-        return true;
       }
     }
-    return false;
   }
 
   public T set(int index, T value) {
