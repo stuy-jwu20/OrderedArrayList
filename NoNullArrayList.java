@@ -20,14 +20,14 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 
   public boolean add(T value) {
     if (value == null) {
-      throw new IllegalArgumentException("You tried to set a null value! That is not allowed.");
+      throw new IllegalArgumentException("You tried to add a null value! That is not allowed.");
     }
     return this.add(value);
   }
 
   public void add(int index, T value) {
     if (value == null) {
-      throw new IllegalArgumentException("You tried to set a null value! That is not allowed.");
+      throw new IllegalArgumentException("You tried to add a null value! That is not allowed.");
     }
     this.add(index, value);
   }
