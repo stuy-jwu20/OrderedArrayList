@@ -13,8 +13,7 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     if (value == null) {
       throw new IllegalArgumentException("You tried to set a null value! That is not allowed.");
     }
-    T old = this.get(index);
-    this.set(index, value);
+    T old = super.set(index, value);
     return old;
   }
 
@@ -22,13 +21,14 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     if (value == null) {
       throw new IllegalArgumentException("You tried to add a null value! That is not allowed.");
     }
-    return this.add(value);
+    super.add(value);
+    return true;
   }
 
   public void add(int index, T value) {
     if (value == null) {
       throw new IllegalArgumentException("You tried to add a null value! That is not allowed.");
     }
-    this.add(index, value);
+    super.add(index, value);
   }
 }
