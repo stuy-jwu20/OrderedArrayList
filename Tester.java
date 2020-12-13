@@ -33,7 +33,7 @@ public class Tester {
       ordered.add(num);
       num -= 100;
     }
-    ordered2.add(7, 99);
+    ordered2.add(7, 100);
     System.out.println(ordered2);
     ordered2.set(3, 666);
     System.out.println(ordered2);
