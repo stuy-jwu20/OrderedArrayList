@@ -20,7 +20,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
       }
     }
     for (int i = 0; this.size() > 1 && i < this.size() - 1; i++) {
-      if ((this.get(i).compareTo(value) > 0) && (value.compareTo(this.get(i+1)) < 0)) {
+      if ((this.get(i).compareTo(value) > 0) && (value.compareTo(this.get(i+1)) <= 0)) {
         super.add(i, value);
         return true;
       }
@@ -35,7 +35,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   public void add(int index, T value) {
     int once = 0;
     for (int i = 0; i < this.size() - 1; i++) {
-      if ((this.get(i).compareTo(value) > 0) && (value.compareTo(this.get(i+1)) < 0) & once == 0)  {
+      if ((this.get(i).compareTo(value) > 0) && (value.compareTo(this.get(i+1)) <= 0) & once == 0)  {
         super.add(i, value);
         once++;
       }
@@ -47,7 +47,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super.remove(index);
     int once = 0;
     for (int i = 0; i < this.size() - 1; i++) {
-      if ((this.get(i).compareTo(value) > 0) && (value.compareTo(this.get(i+1)) < 0) && once == 0) {
+      if ((this.get(i).compareTo(value) > 0) && (value.compareTo(this.get(i+1)) <= 0) && once == 0) {
         super.add(i, value);
         once++;
       }
